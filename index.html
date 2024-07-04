@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="list-title">News List</h1>
+      <table class="table-container">
+        <thead>
+          <tr>
+            <th class="table-header-cell text-left font-medium text-zinc-500">
+              Id
+            </th>
+            <th class="table-header-cell text-left font-bold text-zinc-500">
+              Title
+            </th>
+            <th class="table-header-cell text-left font-bold text-zinc-500">
+              Category
+            </th>
+            <th class="table-header-cell text-left font-bold text-zinc-500">
+              Likes
+            </th>
+            <th class="table-header-cell text-left font-bold text-zinc-500">
+              Date Updated
+            </th>
+            <th class="table-header-cell text-left font-bold text-zinc-500">
+              Date Created
+            </th>
+            <th class="table-header-cell text-left font-medium text-zinc-500">
+              <button class="action-buttons create">Create</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="table-body"></tbody>
+      </table>
+      <div class="news-loading hidden"></div>
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="update-popup hidden">
+      <i class="fa-solid fa-xmark close"></i>
+      <div class="update-container">
+        <h1 class="update-header">Update News</h1>
+        <div class="action-container">
+          <label>New Title</label>
+          <input
+            type="text"
+            placeholder="Enter New Title..."
+            class="update-title"
+          />
+        </div>
+        <div class="action-container">
+          <label>New Description</label>
+          <textarea
+            class="update-desc"
+            type="text"
+            placeholder="Enter New Description..."
+          ></textarea>
+        </div>
+        <div class="action-container">
+          <label>Update Category</label>
+          <select class="update-category">
+            <option value="Politics">Politics</option>
+            <option value="Science">Science</option>
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Technology">Technology</option>
+          </select>
+        </div>
+
+        <div class="update-editor">
+          <div>
+            <label>Editor FirstName</label>
+            <input
+              type="text"
+              placeholder="New FirstName..."
+              class="editor-firstname"
+            />
+          </div>
+          <div>
+            <label>Editor LastName</label>
+            <input
+              type="text"
+              placeholder="New LastName..."
+              class="editor-lastname"
+            />
+          </div>
+        </div>
+        <button class="confirm-update">Confirm</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
